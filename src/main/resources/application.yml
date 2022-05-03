@@ -12,14 +12,15 @@ spring:
     database: MySQL
     show-sql: true
     open-in-view: true
-
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:9001/eureka
+      defaultZone: http://euk-server-1:9001/eureka,http://euk-server-2:9002/eureka
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  security:
+    enabled: true

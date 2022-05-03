@@ -1,7 +1,7 @@
 package com.sc.service;
 
 
-import pojo.Resume;
+import com.sc.pojo.Resume;
 
 public interface ResumeService {
 

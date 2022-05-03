@@ -5,8 +5,10 @@ import com.sc.dao.ResumeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
-import pojo.Resume;
+import com.sc.pojo.Resume;
 import com.sc.service.ResumeService;
+
+import java.util.Optional;
 
 @Service
 public class ResumeServiceImpl implements ResumeService {
@@ -20,6 +22,7 @@ public class ResumeServiceImpl implements ResumeService {
         resume.setId(id);
         // 查询默认简历
         Example<Resume> example = Example.of(resume);
-        return resumeDao.findOne(example).get();
+        Optional<Resume> one = resumeDao.findOne(example);
+        return one.orElse(null);
     }
 }

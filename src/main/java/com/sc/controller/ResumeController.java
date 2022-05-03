@@ -20,8 +20,13 @@ public class ResumeController {
 
     @GetMapping("/openstate/{id}")
     public Integer findDefaultResumeState(@PathVariable Long id) {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         System.out.println(resumeService.findDefaultResumeById(id));
-        System.out.println("====>>>>>>>>>>>>>>我是9001，访问到我这里了......");
+        System.out.println("====>>>>>>>>>>>>>>我是9021，访问到我这里了......");
         return port;
     }
 }

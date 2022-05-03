@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EntityScan("pojo")
+@EntityScan("com/sc/pojo")
 @EnableDiscoveryClient
 public class ProducerApp {
     public static void main(String[] args) {
